@@ -3,7 +3,8 @@ book_engine
 
 Book recommendation engine
 
-Project Organization
+Project Organization (not literal)
+
 ------------
 
     ├── LICENSE
