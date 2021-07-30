@@ -1,0 +1,13 @@
+setup.cfg
+setup.py
+book_engine/__init__.py
+book_engine/main.py
+book_engine/setup.py
+book_engine/test_environment.py
+book_engine.egg-info/PKG-INFO
+book_engine.egg-info/SOURCES.txt
+book_engine.egg-info/dependency_links.txt
+book_engine.egg-info/entry_points.txt
+book_engine.egg-info/top_level.txt
+book_engine/docs/conf.py
+book_engine/src/__init__.py
