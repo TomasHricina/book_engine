@@ -12,8 +12,8 @@ Book engine has several stages:
 -prune =    -takes BX-Book_Ratings.csv
             -extracts all ISBNs
             -sorts them by number of ratings
-            -keeps only top ${your_input} of books
-            (example: book_engine prune 20 - keeps only 20% of the ratings )
+            -keeps only top ${your_input} of top books
+            (example: book_engine prune 20 - keeps only top20 books)
 
 -validate = -(optional)
             -reads every ISBN from Books dataset.
