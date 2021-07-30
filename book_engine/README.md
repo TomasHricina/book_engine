@@ -1,5 +1,5 @@
-Welcome in Book-Recommendation engine.
-
+Welcome in Book-Recommendation engine.   
+   
 Book engine has several stages:
 -download = Downloads raw dataset into "book_engine/data/external/"
 -unzip = Unzips into "book_engine/data/raw/"
