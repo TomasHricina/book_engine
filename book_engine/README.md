@@ -1,7 +1,33 @@
-book_engine
-==============================
+Welcome in Book-Recommendation engine.
 
-Book recommendation engine
+Book engine has several stages:
+-download = Downloads raw dataset into "book_engine/data/external/"
+-unzip = Unzips into "book_engine/data/raw/"
+-prune =    -takes BX-Book_Ratings.csv
+            -extracts all ISBNs
+            -sorts them by number of ratings
+            -keeps only top ${your_input} of top books
+            (example: book_engine prune 20 - keeps only top20 books)
+-validate = -(optional)
+            -reads every ISBN from Books dataset.
+            -connects to Google API and redownloads the name of book and its authors
+            -this process is long, but the engine will remember where you left off
+                if you decide to stop it or if it fails temporarily
+            -ISBNs that are found in Google are placed to: 
+                -"book_engine/data/interim/redownloaded_dataset.csv"
+            -ISBNs that are not found are placed to:
+                -"book_engine/data/interim/failed_isbn_dataset.csv"
+-recommend = -recommends list of top10 books, book_name must be exact match (case insensitive)
+-recommend_match = -also recommends list of top10 books, but tries to match book_name 
+Usage: 
+        book_engine download
+        book_engine unzip
+        book_engine prune           //pass number, like 1000 for top1000 books
+        book_engine validate        //pass API key with double quotes like this: "my-Api-key"
+        book_engine recommend       //pass book name with double quotes, space, then last name of author with double quotes
+        book_engine recommned_match //pass book name with double quotes, space, then last name of author with double quotes
+
+
 
 Project Organization (not literal)
 
