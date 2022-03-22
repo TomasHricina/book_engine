@@ -1,3 +1,0 @@
-[console_scripts]
-book_engine = book_engine:init_entry_point
-
